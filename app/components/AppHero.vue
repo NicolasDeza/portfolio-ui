@@ -31,7 +31,7 @@ const techStack = [
       </div>
 
       <!-- Main heading -->
-<h1 class="mb-6 text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-7xl lg:text-8xl leading-tight">
+<h1 class="mb-6 text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-7xl lg:text-7xl leading-tight">
   Nicolas Deza
   <span class="block mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
     Développeur Web

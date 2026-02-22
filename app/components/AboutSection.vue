@@ -28,19 +28,21 @@ const stats = [
           <!-- Description -->
           <div class="space-y-4 text-neutral-600 dark:text-neutral-400">
             <p>
-              Depuis plus de 5 ans, j'accompagne startups et entreprises dans la réalisation de leurs projets web.
-              De la conception à la mise en production, je transforme vos idées en solutions techniques performantes et évolutives.
+             Diplômé d’un
+              <span class="font-semibold text-neutral-900 dark:text-white">
+             BES en Développement Web
+              </span>,
+               je conçois des sites et interfaces modernes, performants et durables, en m'appuyant sur des technologies actuelles et un code propre.
             </p>
-            <p>
-              Mon approche allie <span class="font-semibold text-neutral-900 dark:text-white">expertise technique</span>,
-              <span class="font-semibold text-neutral-900 dark:text-white">design moderne</span> et
-              <span class="font-semibold text-neutral-900 dark:text-white">focus sur la performance</span>.
-              Chaque ligne de code est pensée pour offrir la meilleure expérience utilisateur possible.
+
+             <p>
+               Basé en Belgique, j’accompagne des indépendants et petites structures dans la création de solutions web sur mesure, avec un objectif clair : proposer des outils fiables, lisibles et efficaces, qui soutiennent leur activité sur le long terme.
             </p>
-            <p>
+
+            <!-- <p>
               Spécialisé dans l'écosystème JavaScript moderne (Vue, Nuxt, React),
               je maîtrise l'ensemble de la stack — du frontend au backend, en passant par le déploiement et l'optimisation SEO.
-            </p>
+            </p> -->
           </div>
 
           <!-- Stats -->
@@ -48,7 +50,7 @@ const stats = [
             <div
               v-for="stat in stats"
               :key="stat.label"
-              class="text-center"
+              class="text-left"
             >
               <div class="mb-2 text-3xl font-bold text-primary-600 dark:text-primary-400">
                 {{ stat.value }}
@@ -69,7 +71,7 @@ const stats = [
             >
               Me contacter
             </UButton>
-            <UButton
+            <!-- <UButton
               to="#"
               size="lg"
               color="neutral"
@@ -77,7 +79,7 @@ const stats = [
               icon="i-lucide-download"
             >
               Télécharger mon CV
-            </UButton>
+            </UButton> -->
           </div>
         </div>
 
@@ -136,24 +138,10 @@ const stats = [
                     </div>
                   </div>
                 </li>
-                <li class="flex items-start gap-3">
-                  <UIcon
-                    name="i-lucide-check-circle"
-                    class="mt-0.5 size-5 shrink-0 text-primary-600 dark:text-primary-400"
-                  />
-                  <div>
-                    <div class="font-semibold text-neutral-900 dark:text-white">
-                      Respect des engagements
-                    </div>
-                    <div class="text-sm text-neutral-600 dark:text-neutral-400">
-                      Délais et budget maîtrisés
-                    </div>
-                  </div>
-                </li>
               </ul>
             </div>
 
-            <!-- Values/Why work with me -->
+            <!-- Pourquoi travailler avec moi -->
             <div class="rounded-2xl border border-neutral-200/80 bg-white p-8 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/50">
               <h3 class="mb-6 text-2xl font-bold text-neutral-900 dark:text-white">
                 Pourquoi me choisir ?
