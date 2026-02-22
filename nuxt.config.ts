@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/ui"],
+  modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxtjs/sitemap"],
+
+  site: {
+    url: "https://www.nicolasdeza.com",
+  },
 
   runtimeConfig: {
     resendApiKey: process.env.RESEND_API_KEY,
