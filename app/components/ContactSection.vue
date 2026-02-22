@@ -9,28 +9,35 @@ const isSubmitting = ref(false)
 const isSuccess = ref(false)
 
 async function onSubmit() {
+  if (isSubmitting.value) return
+
   isSubmitting.value = true
 
   try {
-    await $fetch('/api/contact', {
+    const response = await $fetch('/api/contact', {
       method: 'POST',
-      body: state
+      body: {
+        name: state.name,
+        email: state.email,
+        message: state.message
+      }
     })
 
-    isSuccess.value = true
+    if (response?.success) {
+      isSuccess.value = true
 
-    // Reset form après 3s
-    setTimeout(() => {
+      // Reset form
       state.name = ''
       state.email = ''
       state.message = ''
-      isSuccess.value = false
-    }, 3000)
-  }
-  catch (error) {
-    console.error(error)
-  }
-  finally {
+
+      setTimeout(() => {
+        isSuccess.value = false
+      }, 4000)
+    }
+  } catch (error) {
+    console.error('Erreur envoi formulaire:', error)
+  } finally {
     isSubmitting.value = false
   }
 }

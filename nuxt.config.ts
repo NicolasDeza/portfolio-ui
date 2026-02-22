@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@nuxt/ui"],
 
   runtimeConfig: {
-    resendApiKey: "",
+    resendApiKey: process.env.RESEND_API_KEY,
   },
 
   devtools: {
