@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden px-4 py-20 sm:py-32">
+  <section class="relative flex min-h-[calc(100vh-5rem)] items-center justify-center overflow-hidden px-4 py-16 sm:py-24">
     <!-- Gradient orbs background -->
     <div class="pointer-events-none absolute inset-0 overflow-hidden">
       <div class="absolute -left-40 -top-40 size-80 rounded-full bg-primary-500/20 blur-3xl" />
@@ -103,7 +103,7 @@ onMounted(() => {
       </div>
 
       <!-- Scroll indicator -->
-      <div class="mt-12  animate-bounce transition-all duration-700 ease-out delay-700 sm:block"
+      <div class="mt-10  animate-bounce transition-all duration-700 ease-out delay-700 sm:block"
            :class="mounted ? 'opacity-100' : 'opacity-0'">
         <UIcon
           name="i-lucide-chevron-down"
