@@ -2,16 +2,14 @@
 const technologies = [
   { name: 'Vue.js', icon: 'i-simple-icons-vuedotjs', color: 'text-[#4FC08D]' },
   { name: 'Nuxt', icon: 'i-simple-icons-nuxtdotjs', color: 'text-[#00DC82]' },
-  { name: 'React', icon: 'i-simple-icons-react', color: 'text-[#61DAFB]' },
   { name: 'TypeScript', icon: 'i-simple-icons-typescript', color: 'text-[#3178C6]' },
   { name: 'Tailwind CSS', icon: 'i-simple-icons-tailwindcss', color: 'text-[#06B6D4]' },
   { name: 'Node.js', icon: 'i-simple-icons-nodedotjs', color: 'text-[#339933]' },
+  { name: 'Laravel', icon: 'i-simple-icons-laravel', color: 'text-[#FF2D20]' },
   { name: 'JavaScript', icon: 'i-simple-icons-javascript', color: 'text-[#F7DF1E]' },
   { name: 'PostgreSQL', icon: 'i-simple-icons-postgresql', color: 'text-[#4169E1]' },
-  { name: 'MongoDB', icon: 'i-simple-icons-mongodb', color: 'text-[#47A248]' },
-  { name: 'Docker', icon: 'i-simple-icons-docker', color: 'text-[#2496ED]' },
+  { name: 'Supabase', icon: 'i-simple-icons-supabase', color: 'text-[#3FCF8E]' },
   { name: 'Git', icon: 'i-simple-icons-git', color: 'text-[#F05032]' },
-  { name: 'GraphQL', icon: 'i-simple-icons-graphql', color: 'text-[#E10098]' },
   { name: 'Vercel', icon: 'i-simple-icons-vercel', color: 'text-neutral-900 dark:text-white' },
   { name: 'Vite', icon: 'i-simple-icons-vite', color: 'text-[#646CFF]' }
 ]
