@@ -103,7 +103,7 @@ onMounted(() => {
       </div>
 
       <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce transition-all duration-700 ease-out delay-700"
+      <div class="mt-12  animate-bounce transition-all duration-700 ease-out delay-700 sm:block"
            :class="mounted ? 'opacity-100' : 'opacity-0'">
         <UIcon
           name="i-lucide-chevron-down"
