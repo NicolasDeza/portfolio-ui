@@ -4,7 +4,8 @@ const currentYear = new Date().getFullYear()
 const navigation = [
   { label: 'Projets', to: '#projects' },
   { label: 'Stack', to: '#stack' },
-  { label: 'À propos', to: '#about' }
+  { label: 'À propos', to: '#about' },
+  { label: 'Contact', to: '#contact' }
 ]
 
 const socials = [
@@ -16,7 +17,7 @@ const socials = [
 
 <template>
   <footer class="border-t border-neutral-200/80 bg-white/80 backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-950/80">
-    <div class="mx-auto max-w-7xl px-4 py-12 sm:py-16">
+    <div class="mx-auto max-w-7xl px-4 pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-12">
         <!-- Brand column -->
         <div class="lg:col-span-5">
@@ -30,7 +31,7 @@ const socials = [
               N
             </span>
             <span>
-              <span class="text-neutral-400 dark:text-neutral-500">~/</span>nicolas<span class="text-primary-400">.</span>dev
+              <span class="text-neutral-400 dark:text-neutral-500">~/</span>nicolas<span class="text-primary-400">.</span>deza
             </span>
           </NuxtLink>
           <p class="mt-4 max-w-xs text-sm text-neutral-600 dark:text-neutral-400">

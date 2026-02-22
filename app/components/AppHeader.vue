@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Projets', to: '#projects' },
   { label: 'Stack', to: '#stack' },
   { label: 'À propos', to: '#about' },
-  { label: 'Contact', to: '/contact' }
+  { label: 'Contact', to: '#contact' }
 ]
 
 function toggleTheme() {
@@ -42,7 +42,7 @@ watch(() => route.path, () => {
           N
         </span>
         <span class="hidden sm:block">
-          <span class="text-neutral-400 dark:text-neutral-500">~/</span>nicolas<span class="text-primary-400">.</span>dev
+          <span class="text-neutral-400 dark:text-neutral-500">~/</span>nicolas<span class="text-primary-400">.</span>deza
         </span>
       </NuxtLink>
 

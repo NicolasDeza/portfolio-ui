@@ -17,8 +17,6 @@ const techStack = [
       <div class="absolute bottom-0 left-1/3 size-72 rounded-full bg-primary-600/15 blur-3xl" />
     </div>
 
-    <!-- Grid pattern overlay -->
-    <!-- <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,theme(colors.neutral.200/0.1)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.neutral.200/0.1)_1px,transparent_1px)] [background-size:4rem_4rem] dark:bg-[linear-gradient(to_right,theme(colors.neutral.800/0.3)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.neutral.800/0.3)_1px,transparent_1px)]" /> -->
 
     <div class="relative z-10 mx-auto max-w-4xl text-center">
       <!-- Badge -->
@@ -33,12 +31,16 @@ const techStack = [
       </div>
 
       <!-- Main heading -->
-      <h1 class="mb-6 text-5xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl lg:text-7xl">
+      <h1 class="mb-2 text-5xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl lg:text-7xl">
+        Nicolas Deza
+      </h1>
+
+      <p class="mb-6 text-2xl font-semibold text-neutral-700 dark:text-neutral-300 sm:text-3xl">
         Développeur Web
         <span class="bg-linear-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
           Full-Stack
         </span>
-      </h1>
+      </p>
 
       <!-- Subheading -->
       <p class="mx-auto mb-8 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
