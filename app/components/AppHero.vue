@@ -4,7 +4,7 @@ const techStack = [
   'Nuxt',
   'TypeScript',
   'Tailwind CSS',
-  'Node.js'
+  'WordPress'
 ]
 </script>
 
@@ -31,21 +31,20 @@ const techStack = [
       </div>
 
       <!-- Main heading -->
-      <h1 class="mb-2 text-5xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-6xl lg:text-7xl">
-        Nicolas Deza
-      </h1>
-
-      <p class="mb-6 text-2xl font-semibold text-neutral-700 dark:text-neutral-300 sm:text-3xl">
-        Développeur Web
-        <span class="bg-linear-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
-          Full-Stack
-        </span>
-      </p>
+<h1 class="mb-6 text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-7xl lg:text-8xl leading-tight">
+  Nicolas Deza
+  <span class="block mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
+    Développeur Web
+    <span class="bg-linear-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">
+      Full-Stack
+    </span>
+  </span>
+</h1>
 
       <!-- Subheading -->
       <p class="mx-auto mb-8 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
-        Je crée des applications web modernes, performantes et évolutives.
-        De l'idée au déploiement, je transforme vos projets en produits digitaux d'exception.
+        Créateur de sites et applications web sur mesure, j’aide les entreprises à développer une présence digitale moderne, performante et évolutive.
+
       </p>
 
       <!-- CTAs -->

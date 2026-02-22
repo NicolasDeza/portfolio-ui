@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const stats = [
-  { value: '5+', label: 'Années d\'expérience' },
-  { value: '50+', label: 'Projets livrés' },
+  // { value: '5+', label: 'Années d\'expérience' },
+  // { value: '50+', label: 'Projets livrés' },
   { value: '100%', label: 'Clients satisfaits' }
 ]
 </script>

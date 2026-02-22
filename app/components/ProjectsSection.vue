@@ -2,47 +2,47 @@
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Headless',
-    description: 'Plateforme e-commerce moderne avec Nuxt & Stripe. Interface admin complète, gestion produits, commandes et analytics en temps réel.',
-    image: '', // À remplacer par OG image
-    tags: ['Nuxt', 'Vue', 'Stripe', 'Tailwind'],
-    link: '',
+    title: 'CG Renov',
+    description: 'Site vitrine sur mesure pour une entreprise de rénovation belge, avec un design professionnel, des performances élevées et une structure SEO optimisée pour la visibilité locale.',
+    image: '/projects/og-cgrenov.jpg', // À remplacer par OG image
+    tags: ['Nuxt', 'Tailwind', 'GSAP', 'TypeScript'],
+    link: 'https://www.cgrenov.be/',
     github: ''
   },
   {
     id: 2,
-    title: 'Dashboard SaaS',
-    description: 'Application SaaS B2B avec authentification, gestion multi-tenants, facturation récurrente et API REST documentée.',
-    image: '',
-    tags: ['TypeScript', 'Node.js', 'PostgreSQL', 'Docker'],
-    link: '',
+    title: 'Nuxt Starter Template',
+    description: 'Starter Nuxt moderne, optimisé pour la performance, le SEO et le dark mode, avec un design soigné prêt pour la production.',
+    image: '/projects/nuxt-starter.jpg',
+    tags: ['Nuxt', 'Tailwind'],
+    link: 'https://nuxt-starter-vitrine.vercel.app/',
     github: ''
   },
   {
     id: 3,
-    title: 'App Mobile PWA',
-    description: 'Progressive Web App pour le suivi et la gestion de tâches avec synchronisation offline-first et notifications push.',
-    image: '',
-    tags: ['Vue', 'PWA', 'IndexedDB', 'Firebase'],
-    link: '',
+    title: 'Atelier de Bidibule',
+    description: 'Site e-commerce sur mesure pour une créatrice indépendante, avec personnalisation des produits et paiement en ligne.',
+    image: '/projects/atelier-de-bidibulle.png',
+    tags: ['Laravel', 'Vue', 'Inertia', 'Tailwind', 'Stripe'],
+    link: 'https://atelierdebidibulle.be/',
     github: ''
   },
   {
     id: 4,
-    title: 'API REST & GraphQL',
-    description: 'API hybride REST/GraphQL avec authentification JWT, rate limiting, documentation automatique et tests end-to-end.',
-    image: '',
-    tags: ['Node.js', 'GraphQL', 'Redis', 'Jest'],
-    link: '',
+    title: 'AVH Garden',
+    description: "Site vitrine pour une entreprise dans le batiment d'aménagement intérieur et extérieur.",
+    image: '/projects/og-avhgarden.jpg',
+    tags: ['Nuxt', 'Tailwind'],
+    link: 'https://avh-garden.be/',
     github: ''
   },
   {
     id: 5,
-    title: 'CMS Headless Custom',
-    description: 'Système de gestion de contenu sur-mesure avec éditeur WYSIWYG, versioning, workflow de publication et multi-langues.',
-    image: '',
-    tags: ['Nuxt', 'TipTap', 'MongoDB', 'Express'],
-    link: '',
+    title: 'Samu Horticole',
+    description: 'Dashboard pour un indépendant horticole, permettant la gestion des clients et machines.',
+    image: '/projects/samu-horticole.png',
+    tags: ['Laravel', 'Vue', 'Intertia', 'Tailwind'],
+    link: 'https://nicolasdeza.com',
     github: ''
   }
 

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const technologies = [
   { name: 'Nuxt', icon: 'i-simple-icons-nuxtdotjs', color: 'text-[#00DC82]' },
-  { name: 'Vue.js', icon: 'i-simple-icons-vuedotjs', color: 'text-[#4FC08D]' },
   { name: 'TypeScript', icon: 'i-simple-icons-typescript', color: 'text-[#3178C6]' },
+  { name: 'Vue.js', icon: 'i-simple-icons-vuedotjs', color: 'text-[#4FC08D]' },
   { name: 'Node.js', icon: 'i-simple-icons-nodedotjs', color: 'text-[#339933]' },
   { name: 'Tailwind CSS', icon: 'i-simple-icons-tailwindcss', color: 'text-[#06B6D4]' },
   { name: 'Laravel', icon: 'i-simple-icons-laravel', color: 'text-[#FF2D20]' },
-  { name: 'JavaScript', icon: 'i-simple-icons-javascript', color: 'text-[#F7DF1E]' },
+  { name: 'WordPress', icon: 'i-simple-icons-wordpress', color: 'text-[#21759B]' },
   { name: 'Supabase', icon: 'i-simple-icons-supabase', color: 'text-[#3FCF8E]' },
   { name: 'Git', icon: 'i-simple-icons-git', color: 'text-[#F05032]' },
   { name: 'Vercel', icon: 'i-simple-icons-vercel', color: 'text-neutral-900 dark:text-white' },
