@@ -11,19 +11,28 @@ const isSuccess = ref(false)
 async function onSubmit() {
   isSubmitting.value = true
 
-  // Simule l'envoi (remplace par ton endpoint API ou service email)
-  await new Promise(resolve => setTimeout(resolve, 1000))
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: state
+    })
 
-  isSuccess.value = true
-  isSubmitting.value = false
+    isSuccess.value = true
 
-  // Reset form après 3s
-  setTimeout(() => {
-    state.name = ''
-    state.email = ''
-    state.message = ''
-    isSuccess.value = false
-  }, 3000)
+    // Reset form après 3s
+    setTimeout(() => {
+      state.name = ''
+      state.email = ''
+      state.message = ''
+      isSuccess.value = false
+    }, 3000)
+  }
+  catch (error) {
+    console.error(error)
+  }
+  finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 

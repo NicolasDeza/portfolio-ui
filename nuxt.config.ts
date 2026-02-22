@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   modules: ["@nuxt/eslint", "@nuxt/ui"],
 
+  runtimeConfig: {
+    resendApiKey: "",
+  },
+
   devtools: {
     enabled: true,
   },
