@@ -4,11 +4,41 @@ const stats = [
   // { value: '50+', label: 'Projets livrés' },
   { value: '100%', label: 'Clients satisfaits' }
 ]
+
+const isVisible = ref(false)
+const sectionRef = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+        }
+      })
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+
+  onUnmounted(() => {
+    if (sectionRef.value) {
+      observer.unobserve(sectionRef.value)
+    }
+  })
+})
 </script>
 
 <template>
   <section
     id="about"
+    ref="sectionRef"
     class="relative px-4 py-20 sm:py-32"
   >
     <div class="mx-auto max-w-7xl">
@@ -16,7 +46,10 @@ const stats = [
         <!-- Left column - Content -->
         <div>
           <!-- Section header -->
-          <div class="mb-8">
+          <div
+            class="mb-8 transition-all duration-700 ease-out"
+            :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+          >
             <h2 class="mb-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">
               À propos
             </h2>
@@ -26,7 +59,10 @@ const stats = [
           </div>
 
           <!-- Description -->
-          <div class="space-y-4 text-neutral-600 dark:text-neutral-400">
+          <div
+            class="space-y-4 text-neutral-600 dark:text-neutral-400 transition-all duration-700 ease-out delay-100"
+            :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+          >
             <p>
              Diplômé d’un
               <span class="font-semibold text-neutral-900 dark:text-white">
@@ -46,7 +82,10 @@ const stats = [
           </div>
 
           <!-- Stats -->
-          <div class="mt-12 grid grid-cols-3 gap-6">
+          <div
+            class="mt-12 grid grid-cols-3 gap-6 transition-all duration-700 ease-out delay-200"
+            :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+          >
             <div
               v-for="stat in stats"
               :key="stat.label"
@@ -62,7 +101,10 @@ const stats = [
           </div>
 
           <!-- CTA -->
-          <div class="mt-10 flex flex-wrap gap-4">
+          <div
+            class="mt-10 flex flex-wrap gap-4 transition-all duration-700 ease-out delay-300"
+            :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+          >
             <UButton
               to="mailto:hello@nicolas.dev"
               size="lg"
@@ -87,7 +129,10 @@ const stats = [
         <div>
           <div class="sticky top-24 space-y-6">
             <!-- Approach card -->
-            <div class="rounded-2xl border border-primary-200/50 bg-primary-50/30 p-8 backdrop-blur-sm dark:border-primary-900/30 dark:bg-primary-950/20">
+            <div
+              class="rounded-2xl border border-primary-200/50 bg-primary-50/30 p-8 backdrop-blur-sm dark:border-primary-900/30 dark:bg-primary-950/20 transition-all duration-700 ease-out delay-150"
+              :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+            >
               <h3 class="mb-6 flex items-center gap-2 text-2xl font-bold text-neutral-900 dark:text-white">
                 <UIcon
                   name="i-lucide-sparkles"
@@ -142,7 +187,10 @@ const stats = [
             </div>
 
             <!-- Pourquoi travailler avec moi -->
-            <div class="rounded-2xl border border-neutral-200/80 bg-white p-8 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/50">
+            <div
+              class="rounded-2xl border border-neutral-200/80 bg-white p-8 shadow-sm dark:border-neutral-800 dark:bg-neutral-900/50 transition-all duration-700 ease-out delay-300"
+              :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+            >
               <h3 class="mb-6 text-2xl font-bold text-neutral-900 dark:text-white">
                 Pourquoi me choisir ?
               </h3>
