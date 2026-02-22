@@ -19,7 +19,7 @@ useSeoMeta({
   ogTitle: "Développeur Web – Nicolas Deza",
   ogDescription:
     "Développeur Web spécialisé en Nuxt, Vue.js, Laravel et WordPress. Sites web sur mesure, e-commerce et applications web modernes.",
-  ogImage: "https://www.nicolasdeza.com/og-image.jpg",
+  ogImage: "https://www.nicolasdeza.com/og-image-2.jpg",
   ogUrl: "https://www.nicolasdeza.com/",
   ogType: "website",
 
@@ -27,7 +27,7 @@ useSeoMeta({
   twitterTitle: "Développeur Web – Nicolas Deza",
   twitterDescription:
     "Développeur Web spécialisé en Nuxt, Vue.js, Laravel et WordPress. Sites web sur mesure, e-commerce et applications web modernes.",
-  twitterImage: "https://www.nicolasdeza.com/og-image.jpg",
+  twitterImage: "https://www.nicolasdeza.com/og-image-2.jpg",
 });
 </script>
 
