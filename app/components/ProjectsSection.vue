@@ -121,6 +121,7 @@ const projects = [
               <UButton
                 :to="project.link || '#'"
                 target="_blank"
+                rel="noopener noreferrer"
                 size="sm"
                 variant="subtle"
                 trailing-icon="i-lucide-arrow-up-right"
@@ -132,6 +133,7 @@ const projects = [
                 v-if="project.github"
                 :to="project.github"
                 target="_blank"
+                rel="noopener noreferrer"
                 size="sm"
                 color="neutral"
                 variant="ghost"

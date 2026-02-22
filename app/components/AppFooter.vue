@@ -9,9 +9,9 @@ const navigation = [
 ]
 
 const socials = [
-  { name: 'LinkedIn', icon: 'i-simple-icons-linkedin', to: '', color: 'hover:text-[#0A66C2]' },
-  { name: 'GitHub', icon: 'i-simple-icons-github', to: '', color: 'hover:text-neutral-900 dark:hover:text-white' },
-  { name: 'Instagram', icon: 'i-simple-icons-instagram', to: '', color: 'hover:text-[#E4405F]' }
+  { name: 'LinkedIn', icon: 'i-simple-icons-linkedin', to: 'https://www.linkedin.com/in/nicolas-deza-411711330/', color: 'hover:text-[#0A66C2]' },
+  { name: 'GitHub', icon: 'i-simple-icons-github', to: 'https://github.com/NicolasDeza', color: 'hover:text-neutral-900 dark:hover:text-white' },
+  { name: 'Instagram', icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/nicolas__deza/', color: 'hover:text-[#E4405F]' }
 ]
 </script>
 
