@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const isVisible = ref(false)
+const sectionRef = ref<HTMLElement | null>(null)
+
 const projects = [
   {
     id: 1,
@@ -47,16 +50,46 @@ const projects = [
   }
 
 ]
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+        }
+      })
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+
+  onUnmounted(() => {
+    if (sectionRef.value) {
+      observer.unobserve(sectionRef.value)
+    }
+  })
+})
 </script>
 
 <template>
   <section
     id="projects"
+    ref="sectionRef"
     class="relative px-4 py-20 sm:py-32"
   >
     <div class="mx-auto max-w-7xl">
       <!-- Section header -->
-      <div class="mb-16 text-center">
+      <div
+        class="mb-16 text-center transition-all duration-850 ease-out"
+        :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+      >
         <h2 class="mb-4 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl">
           Projets réalisés
         </h2>
@@ -69,9 +102,11 @@ const projects = [
       <!-- Projects grid -->
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <article
-          v-for="project in projects"
+          v-for="(project, index) in projects"
           :key="project.id"
-          class="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-900/10 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:shadow-neutral-950/50"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-all duration-700 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-900/10 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:shadow-neutral-950/50"
+          :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
+          :style="{ transitionDelay: `${150 + index * 100}ms` }"
         >
           <!-- Image placeholder -->
           <div class="relative aspect-video w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800">
@@ -151,7 +186,10 @@ const projects = [
       </div>
 
       <!-- CTA -->
-      <div class="mt-16 text-center">
+      <div
+        class="mt-16 text-center transition-all duration-700 ease-out delay-700"
+        :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
+      >
         <p class="mb-6 text-neutral-600 dark:text-neutral-400">
           Vous avez un projet en tête ?
         </p>
