@@ -18,7 +18,7 @@ const techStack = [
     </div>
 
     <!-- Grid pattern overlay -->
-    <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,theme(colors.neutral.200/0.1)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.neutral.200/0.1)_1px,transparent_1px)] [background-size:4rem_4rem] dark:bg-[linear-gradient(to_right,theme(colors.neutral.800/0.3)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.neutral.800/0.3)_1px,transparent_1px)]" />
+    <!-- <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,theme(colors.neutral.200/0.1)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.neutral.200/0.1)_1px,transparent_1px)] [background-size:4rem_4rem] dark:bg-[linear-gradient(to_right,theme(colors.neutral.800/0.3)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.neutral.800/0.3)_1px,transparent_1px)]" /> -->
 
     <div class="relative z-10 mx-auto max-w-4xl text-center">
       <!-- Badge -->

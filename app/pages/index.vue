@@ -4,5 +4,6 @@
     <ProjectsSection />
     <StackSection />
     <AboutSection />
+    <CTASection />
   </div>
 </template>

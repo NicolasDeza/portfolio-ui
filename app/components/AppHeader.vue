@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Projets', to: '#projects' },
   { label: 'Stack', to: '#stack' },
   { label: 'À propos', to: '#about' },
-  { label: 'Blog', to: '#blog' }
+  { label: 'Contact', to: '/contact' }
 ]
 
 function toggleTheme() {
