@@ -196,7 +196,6 @@ onMounted(() => {
         <UButton
           to="mailto:hello@nicolas.dev"
           size="lg"
-          icon="i-lucide-rocket"
           class="font-semibold shadow-lg shadow-primary-500/25"
         >
           Travaillons ensemble
