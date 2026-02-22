@@ -6,6 +6,14 @@ const techStack = [
   'Tailwind CSS',
   'WordPress'
 ]
+
+const mounted = ref(false)
+
+onMounted(() => {
+  setTimeout(() => {
+    mounted.value = true
+  }, 100)
+})
 </script>
 
 <template>
@@ -21,7 +29,10 @@ const techStack = [
     <div class="relative z-10 mx-auto max-w-4xl text-center">
       <!-- Badge -->
       <div class="mb-6 flex justify-center">
-        <span class="inline-flex items-center gap-2 rounded-full border border-primary-200/50 bg-primary-50/50 px-4 py-1.5 text-sm font-medium text-primary-700 backdrop-blur-sm dark:border-primary-900/50 dark:bg-primary-950/30 dark:text-primary-300">
+        <span
+          class="inline-flex items-center gap-2 rounded-full border border-primary-200/50 bg-primary-50/50 px-4 py-1.5 text-sm font-medium text-primary-700 backdrop-blur-sm dark:border-primary-900/50 dark:bg-primary-950/30 dark:text-primary-300 transition-all duration-700 ease-out"
+          :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'"
+        >
           <span class="relative flex size-2">
             <span class="absolute inline-flex size-full animate-ping rounded-full bg-primary-400 opacity-75" />
             <span class="relative inline-flex size-2 rounded-full bg-primary-500" />
@@ -31,7 +42,8 @@ const techStack = [
       </div>
 
       <!-- Main heading -->
-<h1 class="mb-6 text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-7xl lg:text-7xl leading-tight">
+<h1 class="mb-6 text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-7xl lg:text-7xl leading-tight transition-all duration-700 ease-out delay-150"
+    :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
   Nicolas Deza
   <span class="block mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold text-neutral-700 dark:text-neutral-300">
     Développeur Web
@@ -42,13 +54,15 @@ const techStack = [
 </h1>
 
       <!-- Subheading -->
-      <p class="mx-auto mb-8 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl">
+      <p class="mx-auto mb-8 max-w-2xl text-lg text-neutral-600 dark:text-neutral-400 sm:text-xl transition-all duration-700 ease-out delay-300"
+         :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
         Créateur de sites et applications web sur mesure, j’aide les entreprises à développer une présence digitale moderne, performante et évolutive.
 
       </p>
 
       <!-- CTAs -->
-      <div class="mb-12 flex flex-wrap items-center justify-center gap-4">
+      <div class="mb-12 flex flex-wrap items-center justify-center gap-4 transition-all duration-700 ease-out delay-450ms"
+           :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
         <UButton
           to="#projects"
           size="xl"
@@ -72,7 +86,8 @@ const techStack = [
       </div>
 
       <!-- Tech stack pills -->
-      <div class="flex flex-wrap items-center justify-center gap-3">
+      <div class="flex flex-wrap items-center justify-center gap-3 transition-all duration-700 ease-out delay-600ms"
+           :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
         <span class="text-sm font-medium text-neutral-500 dark:text-neutral-400">
           Stack technique :
         </span>
@@ -88,7 +103,8 @@ const techStack = [
       </div>
 
       <!-- Scroll indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce transition-all duration-700 ease-out delay-700"
+           :class="mounted ? 'opacity-100' : 'opacity-0'">
         <UIcon
           name="i-lucide-chevron-down"
           class="size-6 text-neutral-400 dark:text-neutral-600"

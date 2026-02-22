@@ -184,7 +184,7 @@ async function onSubmit() {
                 :loading="isSubmitting"
                 :disabled="isSubmitting"
                 icon="i-lucide-send"
-                class="w-full justify-center font-semibold shadow-lg shadow-primary-500/30"
+                class="w-full justify-center font-semibold shadow-lg shadow-primary-500/30 cursor-pointer"
             >
                 {{ isSubmitting ? 'Envoi en cours...' : 'Envoyer' }}
               </UButton>
