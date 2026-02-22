@@ -61,7 +61,7 @@ onMounted(() => {
       </p>
 
       <!-- CTAs -->
-      <div class="mb-12 flex flex-wrap items-center justify-center gap-4 transition-all duration-700 ease-out delay-450ms"
+      <div class="mb-10 flex flex-wrap items-center justify-center gap-4 transition-all duration-700 ease-out delay-450ms"
            :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'">
         <UButton
           to="#projects"
@@ -103,7 +103,7 @@ onMounted(() => {
       </div>
 
       <!-- Scroll indicator -->
-      <div class="mt-10  animate-bounce transition-all duration-700 ease-out delay-700 sm:block"
+      <div class="mt-8  animate-bounce transition-all duration-700 ease-out delay-700 sm:block"
            :class="mounted ? 'opacity-100' : 'opacity-0'">
         <UIcon
           name="i-lucide-chevron-down"
