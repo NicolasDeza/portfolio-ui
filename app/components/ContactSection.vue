@@ -7,6 +7,34 @@ const state = reactive({
 
 const isSubmitting = ref(false)
 const isSuccess = ref(false)
+const isVisible = ref(false)
+const sectionRef = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          isVisible.value = true
+        }
+      })
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    }
+  )
+
+  if (sectionRef.value) {
+    observer.observe(sectionRef.value)
+  }
+
+  onUnmounted(() => {
+    if (sectionRef.value) {
+      observer.unobserve(sectionRef.value)
+    }
+  })
+})
 
 async function onSubmit() {
   if (isSubmitting.value) return
@@ -46,6 +74,7 @@ async function onSubmit() {
 <template>
   <section
     id="contact"
+    ref="sectionRef"
     class="relative overflow-hidden px-4 py-20 sm:py-32"
   >
     <!-- Background gradient -->
@@ -66,7 +95,11 @@ async function onSubmit() {
 
       <!-- Contact info cards inline -->
       <div class="mb-8 grid gap-4 sm:grid-cols-3">
-        <div class="group rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/50">
+        <div
+          class="group rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-700 ease-out hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/50"
+          :class="isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+          :style="{ transitionDelay: '0ms' }"
+        >
           <div class="mb-3 flex size-12 items-center justify-center rounded-xl bg-primary-100 transition-transform duration-300 group-hover:scale-110 dark:bg-primary-950/50">
             <UIcon
               name="i-lucide-mail"
@@ -84,7 +117,11 @@ async function onSubmit() {
           </a>
         </div>
 
-        <div class="group rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/50">
+        <div
+          class="group rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-700 ease-out hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/50"
+          :class="isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+          :style="{ transitionDelay: '200ms' }"
+        >
           <div class="mb-3 flex size-12 items-center justify-center rounded-xl bg-primary-100 transition-transform duration-300 group-hover:scale-110 dark:bg-primary-950/50">
             <UIcon
               name="i-lucide-map-pin"
@@ -99,7 +136,11 @@ async function onSubmit() {
           </p>
         </div>
 
-        <div class="group rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/50">
+        <div
+          class="group rounded-2xl border border-neutral-200/80 bg-white p-6 shadow-sm transition-all duration-700 ease-out hover:shadow-lg dark:border-neutral-800 dark:bg-neutral-900/50"
+          :class="isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+          :style="{ transitionDelay: '400ms' }"
+        >
           <div class="mb-3 flex size-12 items-center justify-center rounded-xl bg-primary-100 transition-transform duration-300 group-hover:scale-110 dark:bg-primary-950/50">
             <UIcon
               name="i-lucide-clock"

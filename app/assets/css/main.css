@@ -29,3 +29,8 @@
   --color-zinc-900: #18181b;
   --color-zinc-950: #1f1f1f;
 }
+
+/* Smooth scrolling for all anchor links */
+html {
+  scroll-behavior: smooth;
+}

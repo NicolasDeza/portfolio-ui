@@ -13,6 +13,13 @@ const socials = [
   { name: 'GitHub', icon: 'i-simple-icons-github', to: 'https://github.com/NicolasDeza', color: 'hover:text-neutral-900 dark:hover:text-white' },
   { name: 'Instagram', icon: 'i-simple-icons-instagram', to: 'https://www.instagram.com/nicolas__deza/', color: 'hover:text-[#E4405F]' }
 ]
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
 </script>
 
 <template>
@@ -27,6 +34,7 @@ const socials = [
           <NuxtLink
             to="/"
             class="group inline-flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-neutral-900 transition-opacity hover:opacity-80 dark:text-white"
+            @click="scrollToTop"
           >
             <span
               class="flex size-10 items-center justify-center rounded-xl bg-linear-to-br from-primary-400 to-primary-600 text-white shadow-lg shadow-primary-500/30 text-base font-bold transition-transform duration-200 group-hover:scale-110"

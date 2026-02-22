@@ -13,6 +13,13 @@ function toggleTheme() {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
 // Close mobile menu on route change
 const route = useRoute()
 watch(() => route.path, () => {
@@ -35,6 +42,7 @@ watch(() => route.path, () => {
       <NuxtLink
         to="/"
         class="group flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-neutral-900 dark:text-white select-none"
+        @click="scrollToTop"
       >
         <span
           class="flex size-7 items-center justify-center rounded-lg bg-linear-to-br from-primary-400 to-primary-600 text-white shadow-lg shadow-primary-500/30 text-xs font-bold transition-transform duration-200 group-hover:scale-110"
