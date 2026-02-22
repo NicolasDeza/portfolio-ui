@@ -119,12 +119,13 @@ onMounted(() => {
                 class="size-12 text-neutral-300 dark:text-neutral-700"
               />
             </div>
-            <img
+            <NuxtImg
               v-else
               :src="project.image"
               :alt="project.title"
               class="size-full object-cover transition-transform duration-300 group-hover:scale-105"
-            >
+              loading="lazy"
+            />
 
             <!-- Overlay gradient on hover -->
             <div class="absolute inset-0 bg-linear-to-t from-neutral-900/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
