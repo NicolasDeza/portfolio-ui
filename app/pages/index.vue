@@ -20,6 +20,9 @@ useSeoMeta({
   ogDescription:
     "Développeur Web spécialisé en Nuxt, Vue.js, Laravel et WordPress. Sites web sur mesure, e-commerce et applications web modernes.",
   ogImage: "https://www.nicolasdeza.com/og-image-2.jpg",
+  ogImageWidth: 1536,
+  ogImageHeight: 768,
+  ogImageType: "image/jpeg",
   ogUrl: "https://www.nicolasdeza.com/",
   ogType: "website",
 
