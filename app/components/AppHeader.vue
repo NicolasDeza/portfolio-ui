@@ -73,15 +73,28 @@ watch(() => route.path, () => {
       <!-- Right actions -->
       <div class="flex items-center gap-2">
         <!-- Theme toggle -->
-        <UButton
-          :icon="colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
-          variant="ghost"
-          color="neutral"
-          size="sm"
-          :aria-label="colorMode.value === 'dark' ? 'Mode clair' : 'Mode sombre'"
-          class="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
-          @click="toggleTheme"
-        />
+        <ClientOnly>
+          <UButton
+            :icon="colorMode.value === 'dark' ? 'i-lucide-sun' : 'i-lucide-moon'"
+            variant="ghost"
+            color="neutral"
+            size="sm"
+            :aria-label="colorMode.value === 'dark' ? 'Mode clair' : 'Mode sombre'"
+            class="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white cursor-pointer"
+            @click="toggleTheme"
+          />
+          <template #fallback>
+            <UButton
+              icon="i-lucide-sun"
+              variant="ghost"
+              color="neutral"
+              size="sm"
+              aria-label="Mode"
+              class="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+              disabled
+            />
+          </template>
+        </ClientOnly>
 
         <!-- CTA -->
         <UButton

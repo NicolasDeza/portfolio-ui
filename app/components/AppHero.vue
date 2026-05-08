@@ -28,7 +28,7 @@ onMounted(() => {
 
     <div class="relative z-10 mx-auto max-w-4xl text-center">
       <!-- Badge -->
-      <div class="mb-6 flex justify-center">
+      <!-- <div class="mb-6 flex justify-center">
         <span
           class="inline-flex items-center gap-2 rounded-full border border-primary-200/50 bg-primary-50/50 px-4 py-1.5 text-sm font-medium text-primary-700 backdrop-blur-sm dark:border-primary-900/50 dark:bg-primary-950/30 dark:text-primary-300 transition-all duration-700 ease-out"
           :class="mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'"
@@ -39,7 +39,7 @@ onMounted(() => {
           </span>
           Disponible pour vos projets
         </span>
-      </div>
+      </div> -->
 
       <!-- Main heading -->
 <h1 class="mb-6 text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white sm:text-7xl lg:text-7xl leading-tight transition-all duration-700 ease-out delay-150"

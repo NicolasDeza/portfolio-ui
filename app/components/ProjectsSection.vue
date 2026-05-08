@@ -3,8 +3,26 @@ const isVisible = ref(false)
 const sectionRef = ref<HTMLElement | null>(null)
 
 const projects = [
-  {
+    {
     id: 1,
+    title: 'Autosaler',
+    description: "Marketplace automobile moderne permettant aux professionnels de publier et gérer leurs véhicules en ligne.",
+    image: '/projects/og-autosaler.jpg',
+    tags: ['Laravel', 'Vue', 'Inertia', 'Tailwind'],
+    link: 'https://autosaler.be/',
+    github: ''
+  },
+  // {
+  //   id: 2,
+  //   title: 'Nuxt Starter Template',
+  //   description: 'Starter Nuxt moderne, optimisé pour la performance, le SEO et le dark mode, avec un design soigné prêt pour la production.',
+  //   image: '/projects/nuxt-starter.jpg',
+  //   tags: ['Nuxt', 'Tailwind'],
+  //   link: 'https://nuxt-starter-vitrine.vercel.app/',
+  //   github: ''
+  // },
+   {
+    id: 3,
     title: 'CG Renov',
     description: 'Site vitrine sur mesure pour une entreprise de rénovation belge, avec un design professionnel, des performances élevées et une structure SEO optimisée pour la visibilité locale.',
     image: '/projects/og-cgrenov.jpg', // À remplacer par OG image
@@ -13,16 +31,7 @@ const projects = [
     github: ''
   },
   {
-    id: 2,
-    title: 'Nuxt Starter Template',
-    description: 'Starter Nuxt moderne, optimisé pour la performance, le SEO et le dark mode, avec un design soigné prêt pour la production.',
-    image: '/projects/nuxt-starter.jpg',
-    tags: ['Nuxt', 'Tailwind'],
-    link: 'https://nuxt-starter-vitrine.vercel.app/',
-    github: ''
-  },
-  {
-    id: 3,
+    id: 4,
     title: 'Atelier de Bidibule',
     description: 'Site e-commerce sur mesure pour une créatrice indépendante, avec personnalisation des produits et paiement en ligne.',
     image: '/projects/atelier-de-bidibulle.png',
@@ -31,7 +40,7 @@ const projects = [
     github: ''
   },
   {
-    id: 4,
+    id: 5,
     title: 'AVH Garden',
     description: "Site vitrine pour une entreprise dans le batiment d'aménagement intérieur et extérieur.",
     image: '/projects/og-avhgarden.jpg',
@@ -39,15 +48,7 @@ const projects = [
     link: 'https://avh-garden.be/',
     github: ''
   },
-  {
-    id: 5,
-    title: 'Samu Horticole',
-    description: 'Dashboard pour un indépendant horticole, permettant la gestion des clients et machines.',
-    image: '/projects/samu-horticole.png',
-    tags: ['Laravel', 'Vue', 'Intertia', 'Tailwind'],
-    link: 'https://nicolasdeza.com',
-    github: ''
-  }
+
 
 ]
 
