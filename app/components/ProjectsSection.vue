@@ -32,7 +32,7 @@ const projects = [
   },
   {
     id: 4,
-    title: 'Atelier de Bidibule',
+    title: 'Atelier de Bidibulle',
     description: 'Site e-commerce sur mesure pour une créatrice indépendante, avec personnalisation des produits et paiement en ligne.',
     image: '/projects/atelier-de-bidibulle.png',
     tags: ['Laravel', 'Vue', 'Inertia', 'Tailwind', 'Stripe'],
